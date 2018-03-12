@@ -1,2 +1,2 @@
-# grupa1-projekat1
-Inicijalni projekat prve grupe
+# grupa2
+svi projekti grupe 2
