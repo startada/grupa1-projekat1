@@ -1,2 +1,2 @@
-# grupa2
-svi projekti grupe 2
+# grupa1
+svi projekti grupe 1
