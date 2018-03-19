@@ -4,6 +4,10 @@
   font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
 }
+.ubuntu-light() {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+}
 
 .playfair-display() {
   font-family: 'Playfair Display', serif;
@@ -167,11 +171,42 @@ html, body {
 }
 
 .hero-container{
+  margin-bottom: 100px;
   overflow: hidden;
+  padding-top:48%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  //background-image: url('https://picsum.photos/g/1920/922?random');
+  -webkit-background-size: cover;
+  background-size: cover;
   img{
     //width: 100%;
     //height: auto;
     .img-responsive-fixed-aspect-ratio();
+  }
+}
+
+.article-container{
+  padding: 0 80px;
+  a.article-link{
+    text-transform: uppercase;
+    .ubuntu-light();
+    &:link, &:visited {
+      color: #b4ad9e;
+    }
+    &:hover, &:focus, &:active {
+      color: darken(#b4ad9e, 20%);
+    }
+  }
+  h2{
+    margin: 20px 0 35px;
+  }
+  .article-content{
+    margin-bottom: 40px;
+    p{
+      .photoshopLineHeight(24,14);
+    }
+
   }
 }
 

@@ -40,4 +40,6 @@
         }
     });
     footerContainer.load('footer.html');
+
+    utilities.MoveExistingImagesToContainerBackgroundCover();
 }());

@@ -317,7 +317,13 @@ body {
   padding-right: 0;
 }
 .hero-container {
+  margin-bottom: 100px;
   overflow: hidden;
+  padding-top: 48%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 .hero-container img {
   display: block;
@@ -325,6 +331,32 @@ body {
   max-height: 100%;
   width: auto;
   height: auto;
+}
+.article-container {
+  padding: 0 80px;
+}
+.article-container a.article-link {
+  text-transform: uppercase;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+}
+.article-container a.article-link:link,
+.article-container a.article-link:visited {
+  color: #b4ad9e;
+}
+.article-container a.article-link:hover,
+.article-container a.article-link:focus,
+.article-container a.article-link:active {
+  color: #857b67;
+}
+.article-container h2 {
+  margin: 20px 0 35px;
+}
+.article-container .article-content {
+  margin-bottom: 40px;
+}
+.article-container .article-content p {
+  line-height: 171.42857143%;
 }
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */
