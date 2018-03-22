@@ -332,8 +332,19 @@ body {
   width: auto;
   height: auto;
 }
-.article-container {
-  padding: 0 80px;
+.article-container .article-image {
+  padding-top: 66.67%;
+  margin: 130px 0 25px;
+  position: relative;
+}
+.article-container .article-image a {
+  display: block;
+  background-color: yellow;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .article-container a.article-link {
   text-transform: uppercase;
@@ -358,11 +369,29 @@ body {
 .article-container .article-content p {
   line-height: 171.42857143%;
 }
+.article-container.full {
+  padding: 0 80px;
+}
+.article-container.right {
+  padding: 0 80px 0 0;
+}
+.article-container.left {
+  padding: 0 0 0 80px;
+}
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+  .logo-container {
+    height: 80px;
+  }
+  .main-menu-container {
+    height: 80px;
+  }
   .main-menu-container ul li a {
     padding: 0 25px;
+  }
+  .hero-container {
+    margin-bottom: 50px;
   }
 }
 /*Ipad Landscape */

@@ -4,6 +4,7 @@
   font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
 }
+
 .ubuntu-light() {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
@@ -124,16 +125,18 @@ html, body {
 
 .pusher {
   height: 55px;
+
 }
 
 //########### end mobile ##########
-.logo-container{
+.logo-container {
   height: 165px;
-  a{
+  a {
     display: block;
     .vertical-center3lines();
   }
 }
+
 .main-menu-container {
   height: 165px;
   ul {
@@ -170,25 +173,39 @@ html, body {
   }
 }
 
-.hero-container{
+.hero-container {
   margin-bottom: 100px;
   overflow: hidden;
-  padding-top:48%;
+  padding-top: 48%;
   background-repeat: no-repeat;
   background-position: center center;
   //background-image: url('https://picsum.photos/g/1920/922?random');
   -webkit-background-size: cover;
   background-size: cover;
-  img{
+  img {
     //width: 100%;
     //height: auto;
     .img-responsive-fixed-aspect-ratio();
   }
 }
 
-.article-container{
-  padding: 0 80px;
-  a.article-link{
+.article-container {
+
+  .article-image {
+    padding-top: 66.67%;
+    margin: 130px 0 25px;
+    position: relative;
+    a{
+      display: block;
+      background-color: yellow;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  a.article-link {
     text-transform: uppercase;
     .ubuntu-light();
     &:link, &:visited {
@@ -198,16 +215,27 @@ html, body {
       color: darken(#b4ad9e, 20%);
     }
   }
-  h2{
+  h2 {
     margin: 20px 0 35px;
   }
-  .article-content{
+  .article-content {
     margin-bottom: 40px;
-    p{
-      .photoshopLineHeight(24,14);
+    p {
+      .photoshopLineHeight(24, 14);
     }
 
   }
+}
+
+.article-container.full {
+  padding: 0 80px;
+}
+
+.article-container.right {
+  padding: 0 80px 0 0;
+}
+.article-container.left {
+  padding: 0 0 0 80px;
 }
 
 /* Large Devices, Wide Screens */
@@ -217,15 +245,24 @@ html, body {
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
-.main-menu-container{
-  ul{
-    li{
-      a{
-        padding: 0 25px;
+  .logo-container {
+    height: 80px;
+  }
+
+  .main-menu-container {
+    height: 80px;
+    ul {
+      li {
+        a {
+          padding: 0 25px;
+        }
       }
     }
   }
-}
+
+  .hero-container {
+    margin-bottom: 50px;
+  }
 }
 
 /*Ipad Landscape */
