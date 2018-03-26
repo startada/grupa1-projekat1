@@ -345,10 +345,9 @@ body {
   right: 0;
   bottom: 0;
 }
-.article-container .title {
+.article-container .article-title {
   display: block;
   background-color: yellow;
-  min-height: 100px;
 }
 .article-container a.article-link {
   text-transform: uppercase;

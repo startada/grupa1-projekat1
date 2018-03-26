@@ -8,9 +8,9 @@
 (function(){
     var mobileMenuTrigger = $('.navigation-trigger a:last-child');
     var articleContent = $('.article-container.half').find('.article-content');
+    var articleTitle = $('.article-container.half').find('h2');
     var highestOne = Number.MIN_VALUE;
 
-    console.log(articleContent);
 
 
     /**
@@ -57,9 +57,9 @@
         // });
         //
         // articleContent.height(highestOne);
-        // utilities.EqualizeElementsHeightByRow('.title');
+        utilities.EqualizeElementsHeightByRow('.article-title');
         utilities.EqualizeElementsHeightByRow(articleContent);
-        console.log('gotovo');
+
 
     });
 }());

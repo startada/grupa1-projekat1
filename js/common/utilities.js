@@ -20,7 +20,7 @@ var utilities = (function($) {
         });
     }
 
-    function GetWidthOfVerticalScrollBar(){
+    function GetWidthOfVerticalScrollBar() {
         var scrollDiv = document.createElement("div");
         scrollDiv.className = "scrollbar-measure";
         document.body.appendChild(scrollDiv);
@@ -31,12 +31,10 @@ var utilities = (function($) {
         return scrollbarWidth;
     }
 
-
-
     return {
-        GetWidthOfVerticalScrollBar:GetWidthOfVerticalScrollBar,
-        IsExisty: function(valueToCheck) {
-            var result = valueToCheck !== null && typeof valueToCheck  !== 'undefined'  && valueToCheck.length > 0;
+        GetWidthOfVerticalScrollBar: GetWidthOfVerticalScrollBar,
+        IsExisty                   : function(valueToCheck) {
+            var result = valueToCheck !== null && typeof valueToCheck !== 'undefined' && valueToCheck.length > 0;
             return result;
         },
 
@@ -62,9 +60,18 @@ var utilities = (function($) {
             return url.split("?")[0];
         },
 
-        EqualizeElementsHeightByRow: function(element, callback, args) {
+        EqualizeElementsHeightByRow            : function(element, callback, args) {
+
             var rowArray = [];
             var maxHeight = 0;
+            if(typeof(element) === 'string'){
+                var elementAsIsCalled = element;
+                element = $(element); //try to find element by query
+                if(element.length === 0){
+                    console.log('(Routine: Equalize by height) element \'' + (elementAsIsCalled) + '\' not found');
+                    return;
+                }
+            }
             var count = element.length;
 
             $(element).css('height', 'auto'); //reset height of elements
@@ -126,8 +133,6 @@ var utilities = (function($) {
         },
 
         MoveExistingImagesToContainerBackgroundCover: function() {
-
-
             $('.background-image-listener-cover').each(function(index) {
 
                 var targetImage = $(this).find('img.background-image-source');
@@ -136,15 +141,15 @@ var utilities = (function($) {
                 targetImage.remove();
             });
         },
-        NoSingleWordInLastRow      : function(selector) {
+        NoSingleWordInLastRow                       : function(selector) {
             selector.each(function(index) {
                 $(this).html($(this).html().replace(/\s([^\s<]+)\s*$/, '&nbsp;$1'));
             });
         },
-        RandomBetween              : function(startNumInclusive, endNumInclusive) {
+        RandomBetween                               : function(startNumInclusive, endNumInclusive) {
             return Math.floor(Math.random() * endNumInclusive) + startNumInclusive;
         },
-        ParseUrl                   : function(url) {
+        ParseUrl                                    : function(url) {
             var parser = document.createElement('a');
             var searchObject = {};
             var queries;
@@ -169,7 +174,7 @@ var utilities = (function($) {
                 hash        : parser.hash
             };
         },
-        ShuffleArray               : function(array) {
+        ShuffleArray                                : function(array) {
             var currentIndex = array.length, temporaryValue, randomIndex;
 
             // While there remain elements to shuffle...
