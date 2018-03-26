@@ -7,6 +7,10 @@
 "use strict";
 (function(){
     var mobileMenuTrigger = $('.navigation-trigger a:last-child');
+    var articleContent = $('.article-container.half').find('.article-content');
+    var highestOne = Number.MIN_VALUE;
+
+    console.log(articleContent);
 
 
     /**
@@ -42,4 +46,22 @@
     footerContainer.load('footer.html');
 
     utilities.MoveExistingImagesToContainerBackgroundCover();
+
+
+    $(window).on('load',function(){
+        // articleContent.each(function(){
+        //     var tempHight=  $(this).height();
+        //     if(tempHight>highestOne){
+        //         highestOne = tempHight;
+        //     }
+        // });
+        //
+        // articleContent.height(highestOne);
+        // utilities.EqualizeElementsHeightByRow('.title');
+        utilities.EqualizeElementsHeightByRow(articleContent);
+        console.log('gotovo');
+
+    });
 }());
+
+

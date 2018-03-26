@@ -197,7 +197,6 @@ html, body {
     position: relative;
     a{
       display: block;
-      background-color: yellow;
       position: absolute;
       top: 0;
       left: 0;
@@ -205,6 +204,11 @@ html, body {
       bottom: 0;
     }
   }
+  .title{
+    display: block;
+    background-color: yellow;
+    min-height: 100px;
+}
   a.article-link {
     text-transform: uppercase;
     .ubuntu-light();
@@ -231,11 +235,37 @@ html, body {
   padding: 0 80px;
 }
 
+.article-container.half{
+  border-bottom: 1px solid #ccc;
+}
+
 .article-container.right {
-  padding: 0 80px 0 0;
+  margin: 0 80px 0 0;
 }
 .article-container.left {
-  padding: 0 0 0 80px;
+  margin: 0 0 0 80px;
+}
+
+.gray{
+  background-color: #f0f0f0;
+  margin: 130px 0;
+  padding: 60px 0;
+  .newsletter-form-container{
+    text-align: center;
+    h2{
+      color: #333333;
+    }
+    input[type = 'email']{
+      .placeholder-color(#626262);
+      border: 0;
+      background-color: transparent;
+    }
+    input[type='submit']{
+      background-color: transparent;
+      border: 0;
+    }
+  }
+
 }
 
 /* Large Devices, Wide Screens */
