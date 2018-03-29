@@ -347,7 +347,6 @@ body {
 }
 .article-container .article-title {
   display: block;
-  background-color: yellow;
 }
 .article-container a.article-link {
   text-transform: uppercase;
@@ -373,7 +372,7 @@ body {
   line-height: 171.42857143%;
 }
 .article-container.full {
-  padding: 0 80px;
+  margin: 0 80px;
 }
 .article-container.half {
   border-bottom: 1px solid #ccc;
@@ -386,34 +385,43 @@ body {
 }
 .gray {
   background-color: #f0f0f0;
-  margin: 130px 0;
-  padding: 60px 0;
+  margin: 130px 0 -30px;
+  padding: 60px 0 75px;
 }
 .gray .newsletter-form-container {
   text-align: center;
 }
-.gray .newsletter-form-container h2 {
+.gray .newsletter-form-container .signup-form-inner {
+  border-bottom: 1px solid black;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.gray .newsletter-form-container .signup-form-inner h2 {
   color: #333333;
+  margin-bottom: 90px;
 }
-.gray .newsletter-form-container input[type='email'] {
+.gray .newsletter-form-container .signup-form-inner input[type='email'] {
   border: 0;
   background-color: transparent;
+  width: calc(100% - 40px);
 }
-.gray .newsletter-form-container input[type='email']::-webkit-input-placeholder {
+.gray .newsletter-form-container .signup-form-inner input[type='email']::-webkit-input-placeholder {
   color: #626262;
 }
-.gray .newsletter-form-container input[type='email']::-moz-placeholder {
+.gray .newsletter-form-container .signup-form-inner input[type='email']::-moz-placeholder {
   color: #626262;
 }
-.gray .newsletter-form-container input[type='email']:-ms-input-placeholder {
+.gray .newsletter-form-container .signup-form-inner input[type='email']:-ms-input-placeholder {
   color: #626262;
 }
-.gray .newsletter-form-container input[type='email']:-moz-placeholder {
+.gray .newsletter-form-container .signup-form-inner input[type='email']:-moz-placeholder {
   color: #626262;
 }
-.gray .newsletter-form-container input[type='submit'] {
+.gray .newsletter-form-container .signup-form-inner input[type='submit'] {
   background-color: transparent;
   border: 0;
+  font-family: FontAwesome;
+  font-size: 20px;
 }
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */
@@ -429,6 +437,17 @@ body {
   }
   .hero-container {
     margin-bottom: 50px;
+  }
+  .article-container .article-image {
+    margin-top: 50px;
+  }
+  .article-container.full,
+  .article-container.left,
+  .article-container.right {
+    margin: 0 0 0 0;
+  }
+  .gray {
+    margin: 60px 0;
   }
 }
 /*Ipad Landscape */

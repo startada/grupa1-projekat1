@@ -57,11 +57,16 @@
         // });
         //
         // articleContent.height(highestOne);
+
+        $(window).trigger('resize');
+
+    });
+
+    $(window).resize($.throttle(400,function(){
         utilities.EqualizeElementsHeightByRow('.article-title');
         utilities.EqualizeElementsHeightByRow(articleContent);
 
-
-    });
+    }));
 }());
 
 
