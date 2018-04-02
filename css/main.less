@@ -281,6 +281,41 @@ html, body {
 
 }
 
+.load-more-button-container{
+  margin: 170px 0 30px;
+  text-align: center;
+  a{
+    border: 1px solid @main-text-color;
+    padding: 15.5px 34px;
+    font-size: 20px;
+    &:link, &:visited {
+      color: @main-text-color;
+    }
+    &:hover, &:focus, &:active {
+      color:darken(@main-text-color,20%);
+      background-color: #e0e0e0;
+    }
+  }
+}
+
+.togggle{
+  max-height:0;
+  overflow: hidden;
+  -webkit-transition: max-height 1s;
+  -moz-transition: max-height 1s;
+  -ms-transition: max-height 1s;
+  -o-transition: max-height 1s;
+  transition: max-height 1s;
+}
+
+.togggle.openned{
+  max-height: 1000px;
+}
+
+.footer-gray{
+  background-color: #f0f0f0;
+}
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
 

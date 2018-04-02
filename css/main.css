@@ -423,6 +423,40 @@ body {
   font-family: FontAwesome;
   font-size: 20px;
 }
+.load-more-button-container {
+  margin: 170px 0 30px;
+  text-align: center;
+}
+.load-more-button-container a {
+  border: 1px solid #626262;
+  padding: 15.5px 34px;
+  font-size: 20px;
+}
+.load-more-button-container a:link,
+.load-more-button-container a:visited {
+  color: #626262;
+}
+.load-more-button-container a:hover,
+.load-more-button-container a:focus,
+.load-more-button-container a:active {
+  color: #2f2f2f;
+  background-color: #e0e0e0;
+}
+.togggle {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 1s;
+  -moz-transition: max-height 1s;
+  -ms-transition: max-height 1s;
+  -o-transition: max-height 1s;
+  transition: max-height 1s;
+}
+.togggle.openned {
+  max-height: 1000px;
+}
+.footer-gray {
+  background-color: #f0f0f0;
+}
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
