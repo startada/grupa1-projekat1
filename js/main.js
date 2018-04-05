@@ -75,12 +75,14 @@
         //     $(this).html('Show Less');
         // }
 
+        $(this).toggleClass('openned');
+
         $('.togggle').toggleClass('openned');
-        if($(this).html() === 'Load More'){
-            $(this).html('Show Less');
+        if($(this).find('span').html() === 'Load More '){
+            $(this).find('span').html('Show Less ');
         }
         else {
-            $(this).html('Load More')
+            $(this).find('span').html('Load More ');
         }
 
     });

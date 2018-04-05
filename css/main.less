@@ -295,17 +295,56 @@ html, body {
       color:darken(@main-text-color,20%);
       background-color: #e0e0e0;
     }
+    &:after{
+      //content:'\f04b';
+      display: inline-block;
+      .fontAwesome();
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      transform: rotate(90deg);
+
+      -webkit-transition: transform 1s;
+      -moz-transition: transform 1s;
+      -ms-transition: transform 1s;
+      -o-transition: transform 1s;
+      transition: transform 1s;
+    }
+    i{
+      display: inline-block;
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      transform: rotate(90deg);
+
+      -webkit-transition: transform 1s;
+      -moz-transition: transform 1s;
+      -ms-transition: transform 1s;
+      -o-transition: transform 1s;
+      transition: transform 1s;
+    }
+  }
+  a.openned{
+    i{
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+    }
   }
 }
 
 .togggle{
   max-height:0;
   overflow: hidden;
-  -webkit-transition: max-height 1s;
-  -moz-transition: max-height 1s;
-  -ms-transition: max-height 1s;
-  -o-transition: max-height 1s;
-  transition: max-height 1s;
+  -webkit-transition: max-height 1s 1s;
+  -moz-transition: max-height 1s 1s;
+  -ms-transition: max-height 1s 1s;
+  -o-transition: max-height 1s 1s;
+  transition: max-height 1s 1s;
 }
 
 .togggle.openned{
@@ -314,6 +353,53 @@ html, body {
 
 .footer-gray{
   background-color: #f0f0f0;
+  margin-top: 140px;
+
+  .footer-inner-content-container{
+    height: 100px;
+    ul{
+      .vertical-center3lines();
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li{
+        display: inline-block;
+        a{
+
+          &:link, &:visited {
+            color: @main-text-color;
+          }
+          &:hover, &:focus, &:active {
+            color: lighten(@main-text-color, 20%);
+          }
+          i{
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+  .footer-inner-content-container.terms{
+    ul{
+      margin-left: 80px;
+      li{
+        a{
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+  .footer-inner-content-container.social{
+    text-align: right;
+    ul{
+      margin-right: 80px;
+      li{
+        a{
+          padding-left: 20px;
+        }
+      }
+    }
+  }
 }
 
 /* Large Devices, Wide Screens */
