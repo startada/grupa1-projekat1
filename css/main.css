@@ -345,6 +345,27 @@ body {
   right: 0;
   bottom: 0;
 }
+.article-container .article-image a:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 40px 40px 0;
+  border-color: transparent rgba(20, 22, 23, 0.45) transparent transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.article-container .article-image i {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  color: #e4ded8;
+  display: inline-block;
+  font-size: 18px;
+  text-align: center;
+  pointer-events: none;
+}
 .article-container .article-title {
   display: block;
 }

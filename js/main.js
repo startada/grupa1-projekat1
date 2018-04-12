@@ -7,8 +7,10 @@
 "use strict";
 (function() {
     var mobileMenuTrigger = $('.navigation-trigger a:last-child');
-    var articleContent = $('.article-container.half').find('.article-content');
-    var articleTitle = $('.article-container.half').find('h2');
+    var articleContainerHalf  =$('.article-container.half');
+    var articleContent = articleContainerHalf.find('.article-content');
+    var articleImage = articleContainerHalf.find('.article-image');
+    var articleTitle = articleContainerHalf.find('h2');
     var highestOne = Number.MIN_VALUE;
     var loadMoreToggleButton = $('.load-more-button-container  a');
 
@@ -55,7 +57,9 @@
         // });
         //
         // articleContent.height(highestOne);
-
+        articleImage.each(function(){
+            $(this).append('<i class="fa fa-search-plus"></i>')
+        });
         $(window).trigger('resize');
 
     });
