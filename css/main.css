@@ -490,10 +490,12 @@ body {
 }
 .gray .articles-recommendation .articles {
   font-size: 0;
+  margin: 0 -1%;
 }
 .gray .articles-recommendation .articles a.recommended-article {
   display: inline-block;
   width: 33.3%;
+  padding: 0 1%;
 }
 .gray .articles-recommendation .articles a.recommended-article h4 {
   font-size: 20px;
