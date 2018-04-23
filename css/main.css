@@ -183,7 +183,7 @@ body {
 .mobile-navigation .logo-container a {
   display: block;
   overflow: hidden;
-  height: 45px;
+  height: 25px;
 }
 .mobile-navigation .logo-container a img {
   width: auto;
@@ -430,6 +430,23 @@ body {
 .article-container .article-share ul li a i {
   font-size: 20px;
 }
+.article-container a.article-learn-more {
+  text-align: right;
+  display: block;
+  text-transform: uppercase;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  margin: -20px 0 20px;
+}
+.article-container a.article-learn-more:link,
+.article-container a.article-learn-more:visited {
+  color: #626262;
+}
+.article-container a.article-learn-more:hover,
+.article-container a.article-learn-more:focus,
+.article-container a.article-learn-more:active {
+  color: orange;
+}
 .article-container.full {
   margin: 0 80px;
 }
@@ -441,6 +458,9 @@ body {
 }
 .article-container.left {
   margin: 0 0 0 80px;
+}
+.article-container.single-post a.article-learn-more {
+  display: none;
 }
 .gray {
   background-color: #f0f0f0;
@@ -487,6 +507,7 @@ body {
   text-transform: uppercase;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
+  margin-bottom: 40px;
 }
 .gray .articles-recommendation .articles {
   font-size: 0;
@@ -657,6 +678,12 @@ body {
 /*Ipad Landscape */
 /*Ipad Portrait*/
 /* Small Devices, Tablets */
+@media only screen and (max-width: 767px) {
+  .gray .articles-recommendation .articles a.recommended-article {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
 /* Extra Small Devices, Phones */
 /* Extra Small Devices, Phones */
 /* Custom, iPhone Retina */

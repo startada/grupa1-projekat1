@@ -46,11 +46,12 @@ html, body {
     margin-top: 0;
     margin-left: 20px;
 
+
     .vertical-center3lines();
     a {
       display: block;
       overflow: hidden;
-      height: 45px;
+      height: 25px;
       img {
         width: auto;
         height: 100%;
@@ -288,6 +289,20 @@ html, body {
     }
   }
 
+  a.article-learn-more{
+    text-align: right;
+    display: block;
+    text-transform: uppercase;
+    .ubuntu-light();
+    margin:-20px 0 20px;
+    &:link, &:visited {
+      color: @main-text-color;
+    }
+    &:hover, &:focus, &:active {
+      color: orange;
+    }
+  }
+
 }
 
 .article-container.full {
@@ -304,6 +319,12 @@ html, body {
 
 .article-container.left {
   margin: 0 0 0 80px;
+}
+
+.article-container.single-post{
+  a.article-learn-more{
+    display: none;
+  }
 }
 
 .gray {
@@ -342,6 +363,7 @@ html, body {
       font-size: 14px;
       text-transform: uppercase;
       .ubuntu-light();
+      margin-bottom: 40px;
     }
     .articles {
       font-size: 0;
@@ -547,7 +569,16 @@ html, body {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px) {
-
+  .gray{
+    .articles-recommendation{
+      .articles{
+        a.recommended-article{
+          width: 100%;
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
 }
 
 /* Extra Small Devices, Phones */

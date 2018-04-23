@@ -7,12 +7,15 @@
 "use strict";
 (function() {
     var mobileMenuTrigger = $('.navigation-trigger a:last-child');
-    var articleContainerHalf  =$('.article-container.half');
+    var articleContainer = $('.article-container');
+    var articleContainerHalf = $('.article-container.half');
     var articleContent = articleContainerHalf.find('.article-content');
     var articleImage = articleContainerHalf.find('.article-image');
     var articleTitle = articleContainerHalf.find('h2');
     var highestOne = Number.MIN_VALUE;
     var loadMoreToggleButton = $('.load-more-button-container  a');
+
+    console.log(articleContainer);
 
     /**
      * events
@@ -57,8 +60,12 @@
         // });
         //
         // articleContent.height(highestOne);
-        articleImage.each(function(){
+        articleImage.each(function() {
             $(this).append('<i class="fa fa-search-plus"></i>')
+        });
+
+        articleContainer.each(function() {
+            $(this).append('<a href="single-post-full.html" class="article-learn-more">Learn More</a>');
         });
         $(window).trigger('resize');
 
@@ -67,7 +74,9 @@
     $(window).resize($.throttle(400, function() {
         utilities.EqualizeElementsHeightByRow('.article-title');
         utilities.EqualizeElementsHeightByRow(articleContent);
-
+        if(utilities.CheckMedia()<768){
+            console.log('lima care');
+        }
     }));
 
     loadMoreToggleButton.click(function() {
