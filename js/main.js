@@ -24,6 +24,15 @@
     var headerContainer = $('.head-content-wrapper');
     var footerContainer = $('.footer-content-wrapper');
 
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        dots:true,
+        navText: ["milojko", "radojko"],
+        items:1
+    });
+
     headerContainer.load('header.html', function() {
         var mobileMenuTrigger = $('.navigation-trigger a:last-child');
         if(utilities.IsExisty(mobileMenuTrigger)){
