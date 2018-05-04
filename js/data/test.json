@@ -1,0 +1,18 @@
+[
+  {
+    "ime": "Milojko",
+    "prezime": "Kostic",
+    "index": {
+      "broj-indexa": "1234",
+      "godina-izdavanja": "2017"
+    }
+  },
+  {
+    "ime": "Bojana",
+    "prezime": "Lazovic",
+    "index": {
+      "broj-indexa": "1234",
+      "godina-izdavanja": "2017"
+    }
+  }
+]

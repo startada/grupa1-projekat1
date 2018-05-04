@@ -14,6 +14,15 @@
     var articleTitle = articleContainerHalf.find('h2');
     var highestOne = Number.MIN_VALUE;
     var loadMoreToggleButton = $('.load-more-button-container  a');
+    var student = {
+        "ime"    : "Milojko",
+        "prezime": "Kostic",
+        "index"  : {
+            "broj-indexa"     : 1234,
+            "godina-izdavanja": 2017,
+            "pametan"         : false
+        }
+    }
 
     console.log(articleContainer);
 
@@ -25,12 +34,12 @@
     var footerContainer = $('.footer-content-wrapper');
 
     $('.owl-carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        nav:true,
-        dots:true,
+        loop   : true,
+        margin : 10,
+        nav    : true,
+        dots   : true,
         navText: ["milojko", "radojko"],
-        items:1
+        items  : 1
     });
 
     headerContainer.load('header.html', function() {
@@ -83,7 +92,7 @@
     $(window).resize($.throttle(400, function() {
         utilities.EqualizeElementsHeightByRow('.article-title');
         utilities.EqualizeElementsHeightByRow(articleContent);
-        if(utilities.CheckMedia()<768){
+        if(utilities.CheckMedia() < 768){
             console.log('lima care');
         }
     }));
