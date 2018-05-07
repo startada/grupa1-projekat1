@@ -24,7 +24,7 @@
         }
     }
 
-    console.log(articleContainer);
+
 
     /**
      * events
@@ -33,14 +33,18 @@
     var headerContainer = $('.head-content-wrapper');
     var footerContainer = $('.footer-content-wrapper');
 
-    $('.owl-carousel').owlCarousel({
-        loop   : true,
-        margin : 10,
-        nav    : true,
-        dots   : true,
-        navText: ["milojko", "radojko"],
-        items  : 1
-    });
+    console.log($('.owl-carousel').length);
+    if($('.owl-carousel').length){
+        $('.owl-carousel').owlCarousel({
+            loop   : true,
+            margin : 10,
+            nav    : true,
+            dots   : true,
+            navText: ["milojko", "radojko"],
+            items  : 1
+        });
+    }
+
 
     headerContainer.load('header.html', function() {
         var mobileMenuTrigger = $('.navigation-trigger a:last-child');
@@ -117,6 +121,31 @@
         }
 
     });
+    
+    $.ajax({
+        url:'https://jsonplaceholder.typicode.com/posts/',
+        dataType:'json',
+
+        success:function(data){
+            console.log(data);
+            var length = data.length;
+            for(var i = 0; i < length; i++) {
+                // var obj = data[i];
+                // console.log(obj.ime);
+                // console.log(obj.prezime);
+                // console.log(obj.godina);
+                // console.log(obj.zaposlen);
+                // console.log('------------');
+
+            }
+
+        },
+        error:function(data){
+            console.log('ERROR', data);
+        }
+    });
+
+
 }());
 
 

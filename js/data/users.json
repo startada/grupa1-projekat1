@@ -3,7 +3,8 @@
     "ime": "Branko",
     "prezime": "Stevanovic",
     "godina": 47,
-    "zaposlen": true
+    "zaposlen": true,
+    "komentar":"ene komentar"
   },
   {
     "ime": "Snezana",
