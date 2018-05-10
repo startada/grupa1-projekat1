@@ -123,7 +123,7 @@
     });
     
     $.ajax({
-        url:'https://jsonplaceholder.typicode.com/posts/',
+        url:'https://jsonplaceholder.typicode.com/posts/1/comments',
         dataType:'json',
 
         success:function(data){

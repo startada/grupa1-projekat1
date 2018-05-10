@@ -462,6 +462,13 @@ body {
 .article-container.single-post a.article-learn-more {
   display: none;
 }
+h3.lima {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
 .gray {
   background-color: #f0f0f0;
   margin: 130px 0 -30px;
@@ -501,13 +508,6 @@ body {
   border: 0;
   font-family: FontAwesome;
   font-size: 20px;
-}
-.gray .articles-recommendation h3 {
-  font-size: 14px;
-  text-transform: uppercase;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 300;
-  margin-bottom: 40px;
 }
 .gray .articles-recommendation .articles {
   font-size: 0;
