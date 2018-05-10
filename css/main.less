@@ -46,7 +46,6 @@ html, body {
     margin-top: 0;
     margin-left: 20px;
 
-
     .vertical-center3lines();
     a {
       display: block;
@@ -289,12 +288,12 @@ html, body {
     }
   }
 
-  a.article-learn-more{
+  a.article-learn-more {
     text-align: right;
     display: block;
     text-transform: uppercase;
     .ubuntu-light();
-    margin:-20px 0 20px;
+    margin: -20px 0 20px;
     &:link, &:visited {
       color: @main-text-color;
     }
@@ -321,17 +320,19 @@ html, body {
   margin: 0 0 0 80px;
 }
 
-.article-container.single-post{
-  a.article-learn-more{
+.article-container.single-post {
+  a.article-learn-more {
     display: none;
   }
 }
+
 h3.lima {
   font-size: 14px;
   text-transform: uppercase;
   .ubuntu-light();
   margin-bottom: 40px;
 }
+
 .gray {
   background-color: #f0f0f0;
   margin: 130px 0 -30px;
@@ -381,12 +382,12 @@ h3.lima {
           }
         }
         &:hover, &:focus, &:active {
-          h4{
+          h4 {
             color: @main-text-color;
           }
 
         }
-        .article-image{
+        .article-image {
           overflow: hidden;
           padding-top: 66%;
         }
@@ -395,8 +396,43 @@ h3.lima {
   }
 }
 
-.comments-wrapper{
+.comments-wrapper {
+  .comment-item {
+    margin-bottom: 70px;
+    .comment-avatar {
+      display: inline-block;
+      width: 70px;
+      vertical-align: top;
+      .avatar-inner {
+        background-color: #cae5e0;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        .same-width-height(70px);
+        text-align: center;
+        line-height: 70px;
+        .ubuntu-light();
+        text-transform: uppercase;
+        color: white;
+        font-size: 34px;
+        overflow: hidden;
+        img {
+          .img-responsive-fixed-aspect-ratio();
+        }
+      }
 
+    }
+    .comment-content {
+      display: inline-block;
+      width: calc(~'100% - 80px');
+      vertical-align: top;
+      padding-left: 35px;
+      h5 {
+        margin: 0 0 20px;
+        font-weight: 700;
+      }
+    }
+  }
 }
 
 .load-more-button-container {
@@ -573,10 +609,10 @@ h3.lima {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px) {
-  .gray{
-    .articles-recommendation{
-      .articles{
-        a.recommended-article{
+  .gray {
+    .articles-recommendation {
+      .articles {
+        a.recommended-article {
           width: 100%;
           margin-bottom: 50px;
         }

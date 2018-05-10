@@ -534,6 +534,60 @@ h3.lima {
   overflow: hidden;
   padding-top: 66%;
 }
+.comments-wrapper .comment-item {
+  margin-bottom: 70px;
+}
+.comments-wrapper .comment-item .comment-avatar {
+  display: inline-block;
+  width: 70px;
+  vertical-align: top;
+}
+.comments-wrapper .comment-item .comment-avatar .avatar-inner {
+  background-color: #cae5e0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  /**
+ ** how to use same-widt-height
+ **   if unit given in px
+ **   .same-width-height(65);
+ **        will produce:
+ **           width:65px;
+ **           height:65px;
+ **   other units need to be explicitly provided as an:
+ **   .same-width-height(65,vw)
+ **       will produce:
+ **         width:65vw;
+ **         height:65vw
+ **/
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: white;
+  font-size: 34px;
+  overflow: hidden;
+}
+.comments-wrapper .comment-item .comment-avatar .avatar-inner img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+.comments-wrapper .comment-item .comment-content {
+  display: inline-block;
+  width: calc(100% - 80px);
+  vertical-align: top;
+  padding-left: 35px;
+}
+.comments-wrapper .comment-item .comment-content h5 {
+  margin: 0 0 20px;
+  font-weight: 700;
+}
 .load-more-button-container {
   margin: 170px 0 30px;
   text-align: center;

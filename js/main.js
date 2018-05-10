@@ -14,6 +14,8 @@
     var articleTitle = articleContainerHalf.find('h2');
     var highestOne = Number.MIN_VALUE;
     var loadMoreToggleButton = $('.load-more-button-container  a');
+    var commentName = $('.comment-content').find('h5').html();
+    console.log(commentName);
     var student = {
         "ime"    : "Milojko",
         "prezime": "Kostic",
