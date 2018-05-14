@@ -14,8 +14,8 @@
     var articleTitle = articleContainerHalf.find('h2');
     var highestOne = Number.MIN_VALUE;
     var loadMoreToggleButton = $('.load-more-button-container  a');
-    var commentName = $('.comment-content').find('h5').html();
-    console.log(commentName);
+    var commentContainer = $('.comment-content');
+
     var student = {
         "ime"    : "Milojko",
         "prezime": "Kostic",
@@ -35,7 +35,7 @@
     var headerContainer = $('.head-content-wrapper');
     var footerContainer = $('.footer-content-wrapper');
 
-    console.log($('.owl-carousel').length);
+
     if($('.owl-carousel').length){
         $('.owl-carousel').owlCarousel({
             loop   : true,
@@ -76,14 +76,7 @@
     utilities.MoveExistingImagesToContainerBackgroundCover();
 
     $(window).on('load', function() {
-        // articleContent.each(function(){
-        //     var tempHight=  $(this).height();
-        //     if(tempHight>highestOne){
-        //         highestOne = tempHight;
-        //     }
-        // });
-        //
-        // articleContent.height(highestOne);
+
         articleImage.each(function() {
             $(this).append('<i class="fa fa-search-plus"></i>')
         });
@@ -92,6 +85,25 @@
             $(this).append('<a href="single-post-full.html" class="article-learn-more">Learn More</a>');
         });
         $(window).trigger('resize');
+
+        commentContainer.each(function(){
+            var name =$(this).find('h5').html();
+            if(!$(this)
+                .parent()
+                .find('.comment-avatar')
+                .find('img')
+                .length){
+                var initialsArr = name.split(' ');
+                var initials = '';
+                for(var i = 0; i < initialsArr.length; i++) {
+                    console.log(initialsArr[i][0]);
+
+                    initials+= initialsArr[i][0];
+                }
+                console.log(initials);
+            }
+
+        });
 
     });
 
