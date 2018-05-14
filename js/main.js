@@ -82,7 +82,6 @@
         });
 
         articleContainer.each(function() {
-            $(this).append('<a href="single-post-full.html" class="article-learn-more">Learn More</a>');
         });
         $(window).trigger('resize');
 
@@ -96,11 +95,9 @@
                 var initialsArr = name.split(' ');
                 var initials = '';
                 for(var i = 0; i < initialsArr.length; i++) {
-                    console.log(initialsArr[i][0]);
 
                     initials+= initialsArr[i][0];
                 }
-                console.log(initials);
             }
 
         });
@@ -111,7 +108,6 @@
         utilities.EqualizeElementsHeightByRow('.article-title');
         utilities.EqualizeElementsHeightByRow(articleContent);
         if(utilities.CheckMedia() < 768){
-            console.log('lima care');
         }
     }));
 
@@ -141,15 +137,9 @@
         dataType:'json',
 
         success:function(data){
-            console.log(data);
             var length = data.length;
             for(var i = 0; i < length; i++) {
-                // var obj = data[i];
-                // console.log(obj.ime);
-                // console.log(obj.prezime);
-                // console.log(obj.godina);
-                // console.log(obj.zaposlen);
-                // console.log('------------');
+
 
             }
 
