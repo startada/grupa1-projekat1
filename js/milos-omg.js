@@ -35,11 +35,15 @@
         dataType:'json',
         success: function(data) {
             racun = data;
+
+            console.log(GetTotal());
         },
         error  : function(data) {
             console.log('ERROR', data);
         }
     });
+
+
 
     function GetTotal() {
         var total = 0;
@@ -52,5 +56,5 @@
         return total;
     }
 
-    console.log(GetTotal());
+
 }());
