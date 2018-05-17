@@ -6,7 +6,7 @@
  */
 "use strict";
 (function() {
-    var racun = {};
+    // var racun = {};
     // var racun = {
     //     datum:"12.05.2018.",
     //     mesto:"Zbojstica",
@@ -30,31 +30,46 @@
     //     ]
     // };
 
-    $.ajax({
-        url    : 'js/data/racuni.json',
-        dataType:'json',
-        success: function(data) {
-            racun = data;
+    // $.ajax({
+    //     url    : 'js/data/racuni.json',
+    //     dataType:'json',
+    //     success: function(data) {
+    //         racun = data;
+    //
+    //         console.log(GetTotal());
+    //     },
+    //     error  : function(data) {
+    //         console.log('ERROR', data);
+    //     }
+    // });
 
-            console.log(GetTotal());
+
+
+    // function GetTotal() {
+    //     var total = 0;
+    //     for(var i = 0; i < racun.stavke.length; i++) {
+    //         var currentStavka = racun.stavke[i];
+    //         total += currentStavka.kolicina * currentStavka.cena;
+    //
+    //     }
+
+    //     return total;
+    // }
+
+    $.ajax({
+        url    : 'data-source.php',
+        dataType:'json',
+        method:'POST',
+        data:{
+            param:34
+        },
+        success: function(data) {
+            console.log(data);
         },
         error  : function(data) {
             console.log('ERROR', data);
         }
     });
-
-
-
-    function GetTotal() {
-        var total = 0;
-        for(var i = 0; i < racun.stavke.length; i++) {
-            var currentStavka = racun.stavke[i];
-            total += currentStavka.kolicina * currentStavka.cena;
-
-        }
-
-        return total;
-    }
 
 
 }());

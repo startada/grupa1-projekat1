@@ -30,11 +30,49 @@
 
 </head>
 <body>
+<?php
+$prvaPromenljiva = 'Branko';
+$drugaPromenljiva = 'Stevanovic';
+$prviNiz = array(1,2,3);
+?>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-<h1>Naslov stranice</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur commodi consectetur odit quibusdam quidem quis repellendus tempora veritatis voluptatum!</p>
+            <h1>Naslov stranice</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur commodi consectetur odit quibusdam quidem quis repellendus tempora veritatis voluptatum!</p>
+            <?php
+
+            echo '<strong>Hello World!</strong> <br>';
+            echo 'ene nema tacke i zareza <br>';
+            echo $prvaPromenljiva.' '.$drugaPromenljiva;
+            echo '<br>';
+            echo "$drugaPromenljiva < $prvaPromenlovdva";
+
+            echo '<br>';
+            echo 3+2; //5
+            echo '<br>';
+            echo 3-2; //1
+            echo '<br>';
+            echo 3*2; //6
+            echo '<br>';
+            echo 3/2; //1.5
+            echo '<br>';
+            echo 3%2; //1
+
+            echo $prviNiz[0];
+
+
+            ?>
+            <h3>Primer niza</h3>
+            <?php
+                $tag = '<div class="image-block"><div class="image-wrapper"><div class="image-content"><a href="javascript:void(0)"><img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Zorana_Mihajlovi%C4%87_Crop.JPG" alt=""></a></div></div><h2>moja slika</h2></div>';
+
+                for($i = 0; $i<200; $i++){
+                    echo $tag;
+                }
+            ?>
+
+
         </div>
     </div>
 </div>
